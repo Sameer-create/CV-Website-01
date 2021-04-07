@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>My Resume</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="badge bg-info text-dark">You are using <%= theme %> theme</h2><br><br>
+      <form action="/resume-maker" class="text-primary form" method="POST">
+          <div class="form-row">
+              <div class="col-md-4 mb-3">
+                  <lable for="" class="badge bg-warning text-dark">Full Name</lable>
+                  <input type="text" name="name"class="form-control">
+              </div>
+              <div class="col-md-4 mb-3">
+                <lable for="" class="badge bg-secondary text-dark">Phone No.</lable>
+                <input type="text" name="phone"class="form-control">
+              </div>
+              <div class="col-md-4 mb-3">
+                <lable for="" class="badge bg-dark">Email</lable>
+                <input type="text" name="email"class="form-control">
+              </div>
+          </div>
+          <div class="mb-3">
+            <label for="validationTextarea" class="form-label badge bg-primary text-dark">About</label>
+            <textarea class="form-control" name="about" id="validationTextarea" placeholder="Write About Yourself" required></textarea>
+          </div>
+             <h4 class="badge bg-info text-dark">Expertise Area</h4>
+             <div class="form-row">
+              <div class="col-md-4 mb-3">
+                  <lable for="" class="badge bg-warning text-dark">Exp-1</lable>
+                  <input type="text" name="exp_1"class="form-control">
+              </div>
+              <div class="col-md-4 mb-3">
+                <lable for="" class="badge bg-secondary text-dark">Exp-2</lable>
+                <input type="text" name="exp_2"class="form-control">
+              </div>
+              <div class="col-md-4 mb-3">
+                <lable for="" class="badge bg-dark">Exp-3</lable>
+                <input type="text" name="exp_3"class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="validationTextarea" class="form-label badge bg-primary text-dark">IT Skills</label>
+                <textarea class="form-control" name="skill" id="validationTextarea" placeholder="Write IT Skills" required></textarea>
+              </div>
+              <h4 class="badge bg-info text-dark">Educational qualifications</h4>
+              <div class="form-group">
+                <div class="col-md-4 mb-3">
+                  <lable for="" class="badge bg-warning text-dark">Year</lable>
+                  <input type="text" name="year1"class="form-control">
+                  <lable for="" class="badge bg-secondary text-dark">Degree-1</lable>
+                  <input type="text" name="degree1"class="form-control">
+                  <lable for="" class="badge bg-dark">Year</lable>
+                  <input type="text" name="year2"class="form-control">
+                  <lable for="" class="badge bg-primary text-dark">Degree-2</lable>
+                  <input type="text" name="degree2"class="form-control">
+                  <lable for="" class="badge bg-warning text-dark">Year</lable>
+                  <input type="text" name="year3"class="form-control">
+                  <lable for="" class="badge bg-secondary text-dark">Degree-3</lable>
+                  <input type="text" name="degree3"class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="validationTextarea" class="form-label badge bg-primary text-dark">Key Skills</label>
+                <textarea class="form-control" name="Kskill" id="validationTextarea" placeholder="Write Key Skills" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="validationTextarea" class="form-label badge bg-primary text-dark">Hobbies</label>
+                <textarea class="form-control" name="hobbies" id="validationTextarea" placeholder="Write your Hobbies" required></textarea>
+              </div>
+              </div>
+              <div class="form-group">
+                <select name="theme" id="" hidden>
+                  <option value="<%= theme %>"><%= theme %></option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-dark">Submit</button><hr>
+          </div>
+  
+      </form>
+  </div>     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
